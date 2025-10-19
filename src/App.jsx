@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header.jsx";
 import Nav from "./components/Nav.jsx";
 import Main from "./components/Main.jsx";
+import Gallery from "./components/Gallery.jsx";
 import Footer from "./components/Footer.jsx";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Nav />
       <Main />
+      <Gallery />
       <Footer />
     </div>
   );
