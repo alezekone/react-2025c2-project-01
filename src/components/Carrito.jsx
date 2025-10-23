@@ -37,11 +37,27 @@ function CarritoBasico() {
             </ul>
             <hr />
             <h3>Contenido del Carrito</h3>
-            {carrito.map((producto) => (
+            {carrito.length === 0 ? (
+                <p>El carrito está vacío.</p>
+            ):(
+                <> {/*Si no usaba el fragment <>...</> (o en su defecto un div) para
+                encerrar todo el siguiente JSX, me daba error. Es decir que solo
+                puedo usar 1 JSX statement y no varios independientes.*/}
+                <p>El carrito NO está vacío.</p>
+                {carrito.map((producto) => (
                     <p key={producto.id}>
                         {producto.nombre}: ${producto.precio.toFixed(2)}
                     </p>
+                ))}
+                </>
+            )}
+{/*
+            {carrito.map((producto) => (
+                <p key={producto.id}>
+                    {producto.nombre}: ${producto.precio.toFixed(2)}
+                </p>
             ))}
+*/}
             <hr />
             <h3>Acciones disponibles</h3>
             {/*Obervar que la función se puede asociar al evento onClick de 2 maneras: */}
@@ -49,6 +65,11 @@ function CarritoBasico() {
             {/* onClick={vaciarCarrito}         <-- función sin paréntesis. */}
             <button onClick={() => vaciarCarrito()}>Vaciar carrito</button>
             <button onClick={vaciarCarrito}>Vaciar carrito</button>
+            <hr />
+            <h3>Importe total</h3>
+            <p>
+                ${carrito.reduce((total, producto) => total + producto.precio, 0).toFixed(2)}
+            </p>
         </div>
     );
 };
