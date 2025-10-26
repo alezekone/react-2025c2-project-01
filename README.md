@@ -1,8 +1,8 @@
 # Readme del proyecto
-Por ahora... solo haciendo pruebas.
+Por ahora... recontra verde, mayormente experimentando.
+Pero la situación está difícil en el trabajo, por lo que tengo que priorizar allí el uso de mi tiempo.
+Espero poner todo en orden en breve.
 
-# Comentarios en JSX 
-{/* Esto es un comentario*/}
 
 # Sobre las DevTools de Chrome para React
 Al abrir la Console de las DevTools, muestra el siguiente mensaje:
